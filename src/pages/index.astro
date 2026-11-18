@@ -1,16 +1,82 @@
 ---
 ---
 
-<html lang="en">
+<html lang="ru">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
+		<link rel="icon" href="data:," />
 		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<meta name="description" content="Татьяна Степанова — хоумстейджинг и декорирование интерьеров. Портфолио скоро появится на сайте." />
+		<meta name="robots" content="noindex, nofollow" />
+		<meta name="theme-color" content="#f5f1e9" />
+		<title>Татьяна Степанова — хоумстейджинг</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<main>
+			<p class="wordmark" lang="en">Stepanova</p>
+			<h1>Татьяна Степанова</h1>
+			<p class="specialty">Хоумстейджинг и декорирование интерьеров</p>
+			<div class="message">
+				<h2>Здесь скоро будет красиво.</h2>
+				<p>Готовлю портфолио и собираю истории преображения домов.<br class="desktop-break" /> Буду рада видеть вас снова.</p>
+			</div>
+		</main>
 	</body>
 </html>
+
+<style>
+	:global(*) { box-sizing: border-box; }
+	:global(html) { background: #f5f1e9; color: #433b33; }
+	:global(body) { margin: 0; font-family: Georgia, 'Times New Roman', serif; }
+	main {
+		min-height: 100svh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 64px 24px;
+		text-align: center;
+		background: radial-gradient(ellipse at 50% 35%, #fffdf8 0%, #f5f1e9 65%);
+	}
+	.wordmark {
+		margin: 0 0 32px;
+		font-size: clamp(64px, 12vw, 128px);
+		font-weight: 400;
+		font-style: italic;
+		letter-spacing: -0.065em;
+		line-height: 1.2;
+	}
+	h1 { margin: 0; font-size: clamp(24px, 4vw, 32px); font-weight: 400; }
+	.specialty {
+		max-width: 420px;
+		margin: 14px 0 0;
+		font-family: 'Segoe UI', Arial, sans-serif;
+		font-size: 16px;
+		line-height: 1.65;
+		color: #6c6258;
+	}
+	.message { margin-top: 64px; padding-top: 32px; position: relative; }
+	.message::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: calc(50% - 24px);
+		width: 48px;
+		height: 1px;
+		background: #b5a393;
+	}
+	h2 { margin: 0; font-size: clamp(25px, 5vw, 36px); font-weight: 400; line-height: 1.3; }
+	.message p {
+		max-width: 520px;
+		margin: 18px 0 0;
+		font-family: 'Segoe UI', Arial, sans-serif;
+		font-size: 16px;
+		line-height: 1.8;
+		color: #6c6258;
+	}
+	@media (max-width: 480px) {
+		main { padding: 48px 24px; }
+		.message { margin-top: 48px; }
+		.desktop-break { display: none; }
+	}
+</style>
